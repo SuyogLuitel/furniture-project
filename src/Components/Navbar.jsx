@@ -16,10 +16,10 @@ const Navbar = () => {
             </div>
             <div className="nav-links">
                 <ul className='flex gap-8 text-base font-medium'>
-                    <li onClick={() => { setMenu("home") }}><Link to='/'>Home</Link> {menu === "home" ? <hr /> : <></>}</li>
-                    <li onClick={() => { setMenu("home") }}><Link to='/shop'>Shop</Link> {menu === "shop" ? <hr /> : <></>}</li>
-                    <li onClick={() => { setMenu("home") }}><Link to='/about'>About</Link> {menu === "about" ? <hr /> : <></>}</li>
-                    <li onClick={() => { setMenu("home") }}><Link to='/contact'>Contact</Link> {menu === "contact" ? <hr /> : <></>}</li>
+                    <li onClick={() => { setMenu("home") }}><Link to='/'>Home</Link> {menu === "home"}</li>
+                    <li onClick={() => { setMenu("home") }}><Link to='/shop'>Shop</Link> {menu === "shop"}</li>
+                    <li onClick={() => { setMenu("home") }}><Link to='/about'>About</Link> {menu === "about"}</li>
+                    <li onClick={() => { setMenu("home") }}><Link to='/contact'>Contact</Link> {menu === "contact"}</li>
                 </ul>
             </div>
             <div className="icons flex gap-8">

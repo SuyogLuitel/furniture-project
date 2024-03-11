@@ -50,7 +50,7 @@ const Product = () => {
             <h2 className='text-center text-3xl font-bold mb-10'>Our Products</h2>
             <div className='flex justify-center gap-6'>
                 {data.map((item) => (
-                    <div key={item.id} className='bg-[#F4F5F7] w-60 relative hover:bg-[#3A3A3A] hover:bg-opacity-30'>
+                    <div key={item.id} className='bg-[#F4F5F7] w-60 relative hover:opacity-40' >
                         <img src={item.coverImg} alt="product" className='w-full h-60 object-cover' />
                         {item.discount > 0 && <div className='bg-red-500 h-12 w-12 rounded-full p-2 text-center text-white absolute top-2 right-2'>-{item.discount}%</div>}
                         <div className='p-4'>
