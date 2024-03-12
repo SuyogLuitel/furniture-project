@@ -1,9 +1,11 @@
 import React from 'react'
+import Banner from '../Components/Banner'
+import shopBanner from '../assets/shop-banner.png';
 
 const Contact = () => {
     return (
         <div>
-            Contact
+            <Banner title="Contact" img={shopBanner} />
         </div>
     )
 }

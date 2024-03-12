@@ -6,7 +6,6 @@ import Home from './Pages/Home';
 import Shop from './Pages/Shop';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
-import ProductDescription from './Pages/ProductDescription';
 
 function App() {
 
@@ -19,7 +18,6 @@ function App() {
           <Route path='/shop' element={<Shop />} />
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/productdescription' element={<ProductDescription />} />
         </Routes>
         <Footer />
       </BrowserRouter>

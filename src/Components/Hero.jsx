@@ -8,10 +8,10 @@ const Hero = () => {
                 <span className="text-sm font-semibold tracking-widest">New Arrival</span>
                 <div className="text-3xl font-bold tracking-normal text-[#B88E2F] mt-px">Discover Our <br /> New Collection</div>
                 <p className="text-sm font-medium mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
-                <button className="text-sm font-medium bg-[#B88E2F] px-7 py-4 text-white my-5">BUY NOW</button>
+                <button className="text-sm font-medium bg-[#B88E2F] px-7 py-2 text-white mt-5 rounded-md hover:bg-[#987022] transition duration-300 ease-in-out">BUY NOW</button>
             </div>
 
-            <img src={backgroundImage} alt="Hero Background" className="absolute top-0 h-[90vh] w-full" />
+            <img src={backgroundImage} alt="Hero Background" className="absolute top-0 h-[90vh] w-full object-cover" />
         </div>
     );
 };

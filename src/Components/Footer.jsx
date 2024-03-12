@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Footer = () => {
     return (
@@ -11,27 +11,33 @@ const Footer = () => {
                 </div>
                 <div>
                     <h5 className='text-xs font-normal text-[#9F9F9F]'>Links</h5>
-                    <li className='list-none py-4 text-xs font-medium'>Home</li>
-                    <li className='list-none py-4 text-xs font-medium'>Shop</li>
-                    <li className='list-none py-4 text-xs font-medium'>About</li>
-                    <li className='list-none py-4 text-xs font-medium'>Contact</li>
+                    <ul className='list-none'>
+                        <li className='py-1 text-xs font-medium'>Home</li>
+                        <li className='py-1 text-xs font-medium'>Shop</li>
+                        <li className='py-1 text-xs font-medium'>About</li>
+                        <li className='py-1 text-xs font-medium'>Contact</li>
+                    </ul>
                 </div>
                 <div>
                     <h5 className='text-xs font-normal text-[#9F9F9F]'>Help</h5>
-                    <li className='list-none py-4 text-xs font-medium'>Payment Options</li>
-                    <li className='list-none py-4 text-xs font-medium'>Returns</li>
-                    <li className='list-none py-4 text-xs font-medium'>Privacy Policies</li>
+                    <ul className='list-none'>
+                        <li className='py-1 text-xs font-medium'>Payment Options</li>
+                        <li className='py-1 text-xs font-medium'>Returns</li>
+                        <li className='py-1 text-xs font-medium'>Privacy Policies</li>
+                    </ul>
                 </div>
                 <div>
                     <h5 className='text-xs font-normal text-[#9F9F9F] py-4'>Newsletter</h5>
-                    <input type="text" placeholder='Enter Your Email Address' className='text-xs font-medium border-b-[1px] p-2 border-b-black' />
-                    <button className='text-xs font-medium p-2'>Subscribe</button>
+                    <div className="flex">
+                        <input type="text" placeholder='Enter Your Email Address' className='text-xs font-medium border-b-[1px] p-2 border-b-black mr-2' />
+                        <button className='text-xs font-medium p-2 bg-[#B88E2F] text-white'>Subscribe</button>
+                    </div>
                 </div>
             </div>
             <hr />
-            <p className='p-10 text-xs font-medium'>2023 furino. All rights reverved</p>
+            <p className='p-10 text-xs font-medium'>2023 Funiro. All rights reserved.</p>
         </div>
-    )
-}
+    );
+};
 
-export default Footer
+export default Footer;
