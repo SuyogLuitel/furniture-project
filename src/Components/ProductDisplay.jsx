@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import product1 from '../assets/product1.png';
 import product2 from '../assets/product2.png';
 import product3 from '../assets/product3.png';
@@ -10,26 +10,19 @@ import linkedin from '../assets/share-linkedin.png'
 import twitter from '../assets/share-twitter.png'
 
 const ProductDisplay = () => {
-    const miniImages = document.querySelectorAll('.mini-image');
-    const displayImage = document.getElementById('displayImage');
-
-    miniImages.forEach(image => {
-        image.addEventListener('click', () => {
-            displayImage.src = image.src;
-        });
-    });
+    const [selectedImage, setSelectedImage] = useState(product1)
+    const images = [product1, product2, product3, product4]
     return (
         <div>
             <div className='flex px-28 py-16 gap-24'>
                 <div className='flex gap-10'>
                     <div className='flex flex-col gap-6'>
-                        <img src={product1} alt="Image 1" className='mini-image bg-[#F9F1E7] w-16 h-14 cursor-pointer' />
-                        <img src={product2} alt="Image 2" className='mini-image bg-[#F9F1E7] w-16 h-14 cursor-pointer' />
-                        <img src={product3} alt="Image 3" className='mini-image bg-[#F9F1E7] w-16 h-14 cursor-pointer' />
-                        <img src={product4} alt="Image 4" className='mini-image bg-[#F9F1E7] w-16 h-14 cursor-pointer' />
+                        {images?.map((item) => {
+                            return <img onClick={() => setSelectedImage(item)} src={item} alt="Image 1" className='mini-image bg-[#F9F1E7] w-16 h-14 cursor-pointer' />
+                        })}
                     </div>
                     <div>
-                        <img src={product1} alt="Image 1" id='displayImage' className='cursor-pointer' />
+                        <img src={selectedImage} alt="Image 1" id='displayImage' className='cursor-pointer' />
                     </div>
                 </div>
                 <div className='w-96 flex flex-col gap-2'>
@@ -50,9 +43,9 @@ const ProductDisplay = () => {
                         <p className='text-[#9F9F9F] text-xs'>Color</p>
                     </div>
                     <div className='flex gap-4'>
-                        <input type="number" defaultValue={1} min={1} className='border-2 border-gray-200 w-20 h-12 p-4 rounded-lg' />
-                        <button className='border-2 border-black h-12 py-2 px-6 rounded-xl'>Add to Cart</button>
-                        <button className='border-2 border-black h-12 py-2 px-6 rounded-xl'>+ Compare</button>
+                        <input type="number" defaultValue={1} min={1} className='border-2 border-gray-200 w-16 h-10 p-4 rounded-lg' />
+                        <button className='border-2 border-black h-10 py-1 px-6 rounded-xl'>Add to Cart</button>
+                        <button className='border-2 border-black h-10 py-1 px-6 rounded-xl'>+ Compare</button>
                     </div>
                     <hr className='my-10' />
                     <div className='flex gap-4'>
