@@ -6,18 +6,30 @@ import Home from './Pages/Home';
 import Shop from './Pages/Shop';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
+import Cart from './Pages/Cart';
+import ProductDescription from './Pages/ProductDescription';
+import Checkout from './Pages/Checkout';
 
 function App() {
+
+  const data = [
+    { path: '/', element: <Home /> },
+    { path: '/shop', element: <Shop /> },
+    { path: '/about', element: <About /> },
+    { path: '/contact', element: <Contact /> },
+    { path: '/cart', element: <Cart /> },
+    { path: '/product', element: <ProductDescription /> },
+    { path: '/checkout', element: <Checkout /> },
+  ]
 
   return (
     <div>
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/shop' element={<Shop />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Contact />} />
+          {data.map((item) => (
+            <Route path={item.path} element={item.element} />
+          ))}
         </Routes>
         <Footer />
       </BrowserRouter>

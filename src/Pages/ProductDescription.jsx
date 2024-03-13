@@ -1,10 +1,12 @@
-import React from 'react'
-import Navbar from '../Components/Navbar'
+import React, { useContext } from 'react'
+import Breadcrumb from '../Components/Breadcrumb';
+import ProductDisplay from '../Components/ProductDisplay';
 
 const ProductDescription = () => {
     return (
         <div>
-            <Navbar />
+            <Breadcrumb />
+            <ProductDisplay />
         </div>
     )
 }

@@ -26,7 +26,7 @@ const Navbar = () => {
                 <img src={userIcon} alt="User Icon" className='w-6' />
                 <img src={searchIcon} alt="Search Icon" className='w-6' />
                 <img src={wishlistIcon} alt="Wishlist Icon" className='w-6' />
-                <img src={cartIcon} alt="Cart Icon" className='w-6' />
+                <Link to='/cart'><img src={cartIcon} alt="Cart Icon" className='w-6' /></Link>
             </div>
         </div>
     );

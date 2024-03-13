@@ -4,37 +4,25 @@ import guarantee from '../assets/guarantee.png';
 import shipping from '../assets/shipping.png';
 import customerSupport from '../assets/customer-support.png';
 
+const items = [
+    { image: trophy, h3: 'High Quality', p: 'Crafted from top materials' },
+    { image: guarantee, h3: 'Warranty Protection', p: 'Over 2 years' },
+    { image: shipping, h3: 'Free Shipping', p: 'Order over $150' },
+    { image: customerSupport, h3: '24/7 Support', p: 'Dedicated support' },
+]
+
 const BannerButtom = () => {
     return (
         <div className='flex bg-[#F9F1E7] h-36 justify-between items-center px-20'>
-            <div className='flex gap-1'>
-                <img src={trophy} alt="Trophy" className='w-10 h-10' />
-                <div>
-                    <h3 className='text-base font-semibold'>High Quality</h3>
-                    <p className='text-sm font-light text-[#898989]'>Crafted from top materials</p>
+            {items.map((item) => (
+                <div className='flex gap-1'>
+                    <img src={item.image} alt="Trophy" className='w-10 h-10' />
+                    <div>
+                        <h3 className='text-base font-semibold'>{item.h3}</h3>
+                        <p className='text-sm font-light text-[#898989]'>{item.p}</p>
+                    </div>
                 </div>
-            </div>
-            <div className='flex gap-1'>
-                <img src={guarantee} alt="Guarantee" className='w-10 h-10' />
-                <div>
-                    <h3 className='text-base font-semibold'>Warranty Protection</h3>
-                    <p className='text-sm font-light text-[#898989]'>Over 2 years</p>
-                </div>
-            </div>
-            <div className='flex gap-1'>
-                <img src={shipping} alt="Shipping" className='w-10 h-10' />
-                <div>
-                    <h3 className='text-base font-semibold'>Free Shipping</h3>
-                    <p className='text-sm font-light text-[#898989]'>Order over $150</p>
-                </div>
-            </div>
-            <div className='flex gap-1'>
-                <img src={customerSupport} alt="Customer Support" className='w-10 h-10' />
-                <div>
-                    <h3 className='text-base font-semibold'>24/7 Support</h3>
-                    <p className='text-sm font-light text-[#898989]'>Dedicated support</p>
-                </div>
-            </div>
+            ))}
         </div>
     )
 }
