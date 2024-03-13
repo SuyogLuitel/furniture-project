@@ -2,7 +2,6 @@ import React from 'react';
 import product from '../assets/all_product'
 import ProductItem from '../Components/ProductItem';
 import Banner from '../Components/Banner';
-import shopBanner from '../assets/shop-banner.png';
 import ShopFilter from '../Components/ShopFilter';
 import BannerButtom from '../Components/BannerButtom';
 import { useNavigate } from 'react-router-dom';
@@ -14,7 +13,7 @@ const Shop = () => {
     }
     return (
         <div>
-            <Banner title="Shop" img={shopBanner} />
+            <Banner title="Shop" />
             <ShopFilter />
             <div className='m-20'>
                 <div className='grid grid-cols-4 gap-6 justify-center'>
