@@ -14,13 +14,18 @@ const infos = [
     { p1: 'Configuration', p2: 'L-shaped', p3: 'L-shaped' },
     { p1: 'Upholstery Material', p2: 'Fabric + Cotton', p3: 'Fabric + Cotton' },
     { p1: 'Upholstery Color', p2: 'Bright Grey & Lion', p3: 'Bright Grey & Lion' },
+    { title: 'Product ', p1: 'Filling Material', p2: 'Foam', p3: 'Matte' },
+    { p1: 'Finish Type', p2: 'Bright Grey & Lion', p3: 'Bright Grey & Lion' },
+    { p1: 'Adjustable Headrest', p2: 'No', p3: 'Yes' },
+    { p1: 'Maximum Load Capacity', p2: '280 KG', p3: '300 KG' },
+    { p1: 'Origin of Manufacture', p2: 'India', p3: 'India' },
 ]
 
 const About = () => {
     return (
         <div>
             <Banner title='Product Comparision' />
-            <div className='flex flex-col gap-2 px-24 py-10'>
+            <div className='flex flex-col gap-8 px-24 py-12'>
                 <div className='grid grid-cols-4 gap-6'>
                     <div>
                         <h2 className='text-base font-medium'>Go to Product page for more Products</h2>
@@ -40,16 +45,18 @@ const About = () => {
                         </select>
                     </div>
                 </div>
-                {infos.map((info) => (
-                    <div>
-                        <h2 className='text-base font-medium py-2'>{info.title}</h2>
-                        <div className='grid grid-cols-4'>
-                            <p className='text-sm font-normal'>{info.p1}</p>
-                            <p className='text-sm font-normal'>{info.p2}</p>
-                            <p className='text-sm font-normal'>{info.p3}</p>
+                <div>
+                    {infos.map((info) => (
+                        <div>
+                            <h2 className='text-base font-medium'>{info.title}</h2>
+                            <div className='grid grid-cols-4'>
+                                <p className='text-sm font-medium'>{info.p1}</p>
+                                <p className='text-sm font-normal'>{info.p2}</p>
+                                <p className='text-sm  font-normal'>{info.p3}</p>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div >
     )
