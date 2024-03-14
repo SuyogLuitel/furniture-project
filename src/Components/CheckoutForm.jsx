@@ -15,6 +15,10 @@ const provinces = [
     { value: 'Karnali', option: 'Karnali' },
     { value: 'Sudurpashchim', option: 'Sudurpashchim' },
 ]
+const options = [
+    { id: 1, label: 'Direct Bank Transfer', description: 'Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.' },
+    { id: 2, label: 'Case on Delivery', description: 'Make your payment upon the delivery of the product in your place.' },
+];
 
 const CheckoutForm = () => {
     return (
@@ -73,13 +77,21 @@ const CheckoutForm = () => {
                             </div>
                         </div>
                         <hr />
+                        {options.map((option) => (
+                            <label className='text-sm font-medium'>
+                                <input type="radio" name='payment' required />
+                                {option.label}
+                                <div className='text-xs text-[#9F9F9F] font-normal pl-4'>{option.description}</div>
+                            </label>
+                        ))}
                         <p className='text-xs font-normal'>Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <span className='font-bold'>privacy policy.</span></p>
                         <button type='submit' className='border border-black rounded w-40 p-1'>Place Order</button>
                     </div>
-                </div>
-            </form>
-        </div>
+                </div >
+            </form >
+        </div >
     )
 }
 
 export default CheckoutForm
+

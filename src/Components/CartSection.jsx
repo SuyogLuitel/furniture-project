@@ -1,6 +1,7 @@
 import React from 'react'
 import product1 from '../assets/product1.png';
 import del from '../assets/delete.png';
+import { Link } from 'react-router-dom'
 
 const CartSection = () => {
     return (
@@ -33,7 +34,9 @@ const CartSection = () => {
                     <h5 className='text-xs font-medium'>Total</h5>
                     <p className='text-sm font-medium text-[#B88E2F]'>Rs. 250,000.00</p>
                 </div>
-                <button className='items-center border border-black w-28 h-10 rounded'>Checkout</button>
+                <Link to='/checkout'>
+                    <button className='items-center border border-black w-28 h-10 rounded'>Checkout</button>
+                </Link>
             </div>
         </div>
     )

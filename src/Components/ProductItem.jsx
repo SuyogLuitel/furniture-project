@@ -2,8 +2,15 @@ import React from 'react'
 
 const ProductItem = ({ handleClick, coverImg, discount, title, description, newPrice, oldPrice }) => {
     return (
-        <div className='bg-[#F4F5F7] relative hover:opacity-50 ' onClick={handleClick}>
-            <img src={coverImg} alt="product" className='w-full h-60 object-cover cursor-pointer' />
+        <div
+            className='bg-[#F4F5F7] relative hover:opacity-50 '
+            onClick={handleClick}
+        >
+            <img
+                src={coverImg}
+                alt="product"
+                className='w-full h-60 object-cover cursor-pointer'
+            />
             {discount > 0 && (
                 <div className='bg-red-500 h-12 w-12 rounded-full p-2 text-center text-white absolute top-2 right-2'>-{discount}%</div>
             )}

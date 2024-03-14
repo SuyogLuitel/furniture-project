@@ -9,6 +9,7 @@ import Contact from './Pages/Contact';
 import Cart from './Pages/Cart';
 import ProductDescription from './Pages/ProductDescription';
 import Checkout from './Pages/Checkout';
+import ProductComparision from './Pages/ProductComparision';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
     { path: '/cart', element: <Cart /> },
     { path: '/product', element: <ProductDescription /> },
     { path: '/checkout', element: <Checkout /> },
+    { path: '/productcomparision', element: <ProductComparision /> },
   ]
 
   return (
