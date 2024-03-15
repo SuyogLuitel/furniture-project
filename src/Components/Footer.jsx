@@ -4,12 +4,12 @@ const Footer = () => {
     return (
         <div>
             <hr />
-            <div className='flex justify-around py-5'>
+            <div className='grid grid-cols-4 gap-6 px-10 py-5 sm:grid-cols-1 sm:gap-2 md:grid-cols-1 md:gap-2'>
                 <div>
                     <h3 className='text-base font-medium'>Funiro.</h3>
                     <p className='text-xs font-normal py-4 text-[#9F9F9F]'>400 University Drive Suite 200 Coral Gables, <br /> FL 33134 USA</p>
                 </div>
-                <div>
+                <div className='sm:py-2'>
                     <h5 className='text-xs font-normal text-[#9F9F9F]'>Links</h5>
                     <ul className='list-none'>
                         <li className='py-1 text-xs font-medium'>Home</li>
@@ -18,7 +18,7 @@ const Footer = () => {
                         <li className='py-1 text-xs font-medium'>Contact</li>
                     </ul>
                 </div>
-                <div>
+                <div className='sm:py-2'>
                     <h5 className='text-xs font-normal text-[#9F9F9F]'>Help</h5>
                     <ul className='list-none'>
                         <li className='py-1 text-xs font-medium'>Payment Options</li>

@@ -67,11 +67,11 @@ const dimension = [
 
 const ProductCompare = () => {
     return (
-        <div className='flex flex-col gap-8 px-44 py-12'>
-            <div className='flex'>
+        <div className='flex flex-col gap-8 px-44 py-12 sm:px-2'>
+            <div className='flex sm:flex-col'>
                 <div className='grid grid-cols-3 gap-12'>
                     <div>
-                        <h2 className='text-base font-medium'>Go to Product page for more Products</h2>
+                        <h2 className='text-base font-medium sm:text-sm'>Go to Product page for more Products</h2>
                         <button className='text-xs font-medium text-[#727272]'>View More</button>
                     </div>
                     {products.map((product) => (
@@ -82,7 +82,7 @@ const ProductCompare = () => {
                         </div>
                     ))}
                 </div>
-                <select className='text-xs text-white bg-[#B88E2F] p-2 h-8 rounded'>
+                <select className='text-xs text-white bg-[#B88E2F] p-2 h-8 rounded sm:w-36'>
                     <option value=''>Choose a product</option>
                 </select>
             </div>
@@ -90,19 +90,19 @@ const ProductCompare = () => {
                 <h2 className='text-lg font-medium my-2'>General</h2>
                 <div className='grid grid-cols-3'>
                     {general.map((info) => (
-                        <p className='text-sm font-normal py-2'>{info.name}</p>
+                        <p className='text-sm font-normal py-2 sm:text-xs'>{info.name}</p>
                     ))}
                 </div>
                 <h2 className='text-lg font-medium my-2'>Product</h2>
                 <div className='grid grid-cols-3'>
                     {product.map((info) => (
-                        <p className='text-sm font-normal py-2'>{info.name}</p>
+                        <p className='text-sm font-normal py-2 sm:text-xs'>{info.name}</p>
                     ))}
                 </div>
                 <h2 className='text-lg font-medium my-2'>Dimension</h2>
                 <div className='grid grid-cols-3'>
                     {dimension.map((info) => (
-                        <p className='text-sm font-normal py-2'>{info.name}</p>
+                        <p className='text-sm font-normal py-2 sm:text-xs'>{info.name}</p>
                     ))}
                 </div>
                 <button className='text-xs text-white bg-[#B88E2F] px-6 py-2 rounded mt-10'>Add to Cart</button>

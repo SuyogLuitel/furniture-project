@@ -11,27 +11,32 @@ const Navbar = () => {
     return (
         <div className='nav w-full bg-white-smoke-500 flex h-16 p-4 items-center justify-between'>
             <div className="logo flex items-center">
-                <img src={logo} alt="Furniro Logo" className='w-8' />
+                <img src={logo} alt="Furniro Logo" className='w-8 ' />
                 <div className='font-bold text-2xl'>Furniro</div>
             </div>
             <div className="nav-links">
-                <ul className='flex gap-8 text-base font-medium'>
+                <ul className='flex gap-8 text-base font-medium sm:hidden md:hidden'>
                     <li onClick={() => { setMenu("home") }}><Link to='/'>Home</Link></li>
                     <li onClick={() => { setMenu("shop") }}><Link to='/shop'>Shop</Link></li>
                     <li onClick={() => { setMenu("about") }}><Link to='/about'>About</Link></li>
                     <li onClick={() => { setMenu("contact") }}><Link to='/contact'>Contact</Link></li>
                 </ul>
             </div>
-            <div className="icons flex gap-8">
+            <div className="icons flex gap-8 sm:hidden md:hidden">
                 <img src={userIcon} alt="User Icon" className='w-6' />
                 <img src={searchIcon} alt="Search Icon" className='w-6' />
                 <img src={wishlistIcon} alt="Wishlist Icon" className='w-6' />
                 <Link to='/cart'><img src={cartIcon} alt="Cart Icon" className='w-6' /></Link>
+            </div>
+            <div className="hidden sm:block md:block flex items-center">
+                <button className="mobile-menu-btn focus:outline-none">
+                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
             </div>
         </div>
     );
 };
 
 export default Navbar;
-
-

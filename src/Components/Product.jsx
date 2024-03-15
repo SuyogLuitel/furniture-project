@@ -9,9 +9,9 @@ const Product = () => {
         navigate('/product')
     }
     return (
-        <div className='m-20'>
-            <h2 className='text-center text-3xl font-bold mb-10'>Our Products</h2>
-            <div className='grid grid-cols-4 gap-6 justify-center'>
+        <div className='mx-20 sm:mx-12 md:mx-12'>
+            <h2 className='text-center text-3xl font-bold mb-10 sm:text-xl'>Our Products</h2>
+            <div className='grid grid-cols-4 gap-6 sm:grid-cols-1 md:grid-cols-2'>
                 {product.map((item, i) => {
                     return <ProductItem handleClick={handleProductClick} key={i} id={item.id} coverImg={item.coverImg} title={item.title} discount={item.discount} description={item.description} newPrice={item.newPrice} oldPrice={item.oldPrice} />
                 })}

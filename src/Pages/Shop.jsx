@@ -16,7 +16,7 @@ const Shop = () => {
             <Banner title="Shop" />
             <ShopFilter />
             <div className='m-20'>
-                <div className='grid grid-cols-4 gap-6 justify-center'>
+                <div className='grid grid-cols-4 gap-6 justify-center sm:grid-cols-1 md:grid-cols-2'>
                     {product.map((item, i) => {
                         return <ProductItem handleClick={handleProductClick} key={i} id={item.id} coverImg={item.coverImg} title={item.title} discount={item.discount} description={item.description} newPrice={item.newPrice} oldPrice={item.oldPrice} />
                     })}

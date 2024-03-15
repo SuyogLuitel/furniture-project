@@ -5,8 +5,8 @@ import img3 from '../assets/Rectangle26.png';
 
 const Inspiration = () => {
     return (
-        <div className='bg-[#FCF8F3] flex justify-center items-center px-6 py-6 gap-20'>
-            <div className='w-80'>
+        <div className='bg-[#FCF8F3] flex justify-center items-center my-5 p-6 gap-20 sm:flex-col sm:gap-10 md:flex-col'>
+            <div className='w-80 sm:p-2'>
                 <h2 className='text-3xl font-bold'>50+ Beautiful Room Inspirations</h2>
                 <p className='text-sm font-normal py-4'>Our designers have created numerous beautiful room prototypes to inspire you.</p>
                 <button className="text-sm font-medium bg-[#B88E2F] px-8 py-2 text-white rounded-md hover:bg-[#987022] transition duration-300 ease-in-out">Explore More</button>
@@ -20,7 +20,7 @@ const Inspiration = () => {
                     </div>
                     <button className='absolute bottom-4 left-32 bg-[#B88E2F] px-2 text-white text-xl'>&#8594;</button>
                 </div>
-                <div className='relative'>
+                <div className='relative sm:hidden'>
                     <img src={img2} alt="Living Room" className='h-96 object-cover rounded-lg' />
                     <button className='absolute top-1/2 right-0 transform -translate-y-1/2 bg-white bg-opacity-80 p-1 rounded-full'>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-[#B88E2F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -5,7 +5,7 @@ import viewList from '../assets/view-list.png';
 
 const ShopFilter = () => {
     return (
-        <div className='bg-[#F9F1E7] h-24 flex items-center px-20 text-sm justify-between'>
+        <div className='bg-[#F9F1E7] h-24 flex items-center px-20 text-sm justify-between sm:hidden'>
             <div className='flex gap-2'>
                 <img src={filter} alt="Filter" className='w-5' />
                 <p>Filter</p>

@@ -22,10 +22,10 @@ const options = [
 
 const CheckoutForm = () => {
     return (
-        <div className='px-32 py-10'>
+        <div className='px-32 py-10 sm:px-10'>
             <h2 className='text-xl font-medium'>Billing details</h2>
             <form action="">
-                <div className='flex gap-44'>
+                <div className='flex gap-44 sm:flex-col sm:gap-10'>
                     <div>
                         <div className='flex gap-2'>
                             <InputField label='First Name' htmlfor='fname' id='fname' type='text' required className='border border-[#9F9F9F] p-2 text-sm w-36 rounded-md' />
@@ -58,7 +58,7 @@ const CheckoutForm = () => {
                         <InputField htmlfor='info' id='info' type='text' placeholder='Additional information' />
                     </div>
                     <div className='flex flex-col gap-4'>
-                        <div className='flex gap-44'>
+                        <div className='flex gap-44 sm:gap-20'>
                             <div className='flex flex-col gap-4'>
                                 <h4 className='text-lg font-medium'>Product</h4>
                                 <div className='flex items-center gap-2 text-xs'>

@@ -11,14 +11,14 @@ const categories = [
 
 const Category = () => {
     return (
-        <div className='relative mt-96 mb-10'>
-            <h2 className='text-center mt-12 text-3xl font-bold'>Browse The Range</h2>
-            <p className='text-center my-1 text-lg font-normal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <div className='flex mt-10 px-20 mx-12 gap-10'>
+        <div className='p-20 sm:px-2 md:px-1'>
+            <h2 className='text-center text-3xl font-bold sm:text-xl'>Browse The Range</h2>
+            <p className='text-center py-2 text-lg font-normal sm:text-sm'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div className='grid grid-cols-3 gap-2 mx-auto sm:grid-cols-1 md:grid-cols-2'>
                 {categories.map((category, index) => (
                     <div key={index}>
-                        <img src={category.image} alt={category.alt} className='h-96' />
-                        <p className='mt-4 text-lg font-semibold text-center'>{category.title}</p>
+                        <img src={category.image} alt={category.alt} className='p-10' />
+                        <p className='text-lg font-semibold text-center'>{category.title}</p>
                     </div>
                 ))}
             </div>
