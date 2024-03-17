@@ -32,12 +32,12 @@ const ContactForm = () => {
                     ))}
                 </div>
                 <div>
-                    <form action="">
-                        <InputField label='Your name' htmlfor='name' id='name' type='text' placeholder='Abc' required />
+                    <form>
+                        <InputField label='Your name' htmlfor='name' id='name' type='text' placeholder='Abc' />
                         <InputField label='Email address' htmlfor='email' id='email' type='email' placeholder='Abc@def.com' required />
                         <InputField label='Subject' type='text' htmlfor='subject' id='subject' placeholder='This is an optional' required />
                         <Textarea label='Message' placeholder='Hi! i would like to ask about' />
-                        <button type='submit' className='text-white text-xs bg-[#B88E2F] px-10 py-2 rounded'>Submit</button>
+                        <input type="submit" className='text-white text-xs bg-[#B88E2F] px-10 py-2 rounded' />
                     </form>
                 </div>
             </div>
