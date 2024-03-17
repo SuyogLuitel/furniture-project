@@ -14,7 +14,7 @@ const ProductDisplay = () => {
     const images = [product1, product2, product3, product4]
     return (
         <div>
-            <div className='flex px-28 py-16 gap-24 sm:flex-col sm:px-5 sm:gap-2'>
+            <div className='flex px-28 py-16 gap-24 sm:flex-col md:flex-col sm:px-5 sm:gap-2 md:gap-6'>
                 <div className='flex gap-10 sm:gap-2'>
                     <div className='flex flex-col gap-6'>
                         {images.map((item) => {
@@ -37,7 +37,12 @@ const ProductDisplay = () => {
                     </div>
                     <p className='text-xs font-normal'>Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.</p>
                     <div className="size">
-                        <p className='text-[#9F9F9F] text-xs'>Size</p>
+                        <p className='text-[#9F9F9F] text-xs mb-1'>Size</p>
+                        <div className='flex gap-4'>
+                            <div className='text-sm text-white bg-[#B88E2F] px-2 rounded'>S</div>
+                            <div className='text-sm bg-[#F9F1E7] px-2 rounded'>L</div>
+                            <div className='text-sm  bg-[#F9F1E7] px-2 rounded'>XL</div>
+                        </div>
                     </div>
                     <div className="color">
                         <p className='text-[#9F9F9F] text-xs'>Color</p>

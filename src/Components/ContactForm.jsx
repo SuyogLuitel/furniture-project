@@ -18,7 +18,7 @@ const ContactForm = () => {
                 <h2 className='text-2xl font-semibold '>Get In Touch With Us</h2>
                 <p className='text-sm font-normal text-[#9F9F9F]'>For More Information About Our Product & Services. Please Feel Free To Drop Us An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!</p>
             </div>
-            <div className='px-96 py-10 flex gap-40 sm:flex-col sm:px-12 sm:gap-12 md:px-10'>
+            <div className='px-96 py-10 flex gap-40 sm:flex-col sm:px-12 sm:gap-12 md:px-8'>
                 <div className='flex flex-col gap-10'>
                     {infos.map((info) => (
                         <div className='flex gap-2'>

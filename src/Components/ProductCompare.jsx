@@ -67,8 +67,8 @@ const dimension = [
 
 const ProductCompare = () => {
     return (
-        <div className='flex flex-col gap-8 px-44 py-12 sm:px-2'>
-            <div className='flex sm:flex-col'>
+        <div className='flex flex-col gap-8 px-44 py-12 sm:px-2 md:px-4'>
+            <div className='flex sm:flex-col md:flex-col'>
                 <div className='grid grid-cols-3 gap-12'>
                     <div>
                         <h2 className='text-base font-medium sm:text-sm'>Go to Product page for more Products</h2>
@@ -82,7 +82,7 @@ const ProductCompare = () => {
                         </div>
                     ))}
                 </div>
-                <select className='text-xs text-white bg-[#B88E2F] p-2 h-8 rounded sm:w-36'>
+                <select className='text-xs text-white bg-[#B88E2F] p-2 h-8 rounded sm:w-36 md:w-36'>
                     <option value=''>Choose a product</option>
                 </select>
             </div>
@@ -105,7 +105,9 @@ const ProductCompare = () => {
                         <p className='text-sm font-normal py-2 sm:text-xs'>{info.name}</p>
                     ))}
                 </div>
-                <button className='text-xs text-white bg-[#B88E2F] px-6 py-2 rounded mt-10'>Add to Cart</button>
+                <div className='grid grid-cols-4 mt-10'>
+                    <button className='text-xs text-white bg-[#B88E2F] px-8 py-2 rounded w-32'>Add to Cart</button>
+                </div>
             </div>
         </div>
     )
