@@ -12,11 +12,11 @@ const UserForm = () => {
         <div>
             <h2>User Detail</h2>
             <form onSubmit={handleSubmit(onsubmit)}>
-                <Input type='text' placeholder='Your name' registerName='name' required />
-                <Input type='email' placeholder='Your email' />
+                <Input type='text' register={register} placeholder='Your name' registerName='name' required />
+                {/* <Input type='email' placeholder='Your email' />
                 <Input type='number' placeholder='phone' />
                 <Input type='text' placeholder='Company name' />
-                <Input type='text' placeholder='Address' />
+                <Input type='text' placeholder='Address' /> */}
                 <br />
                 <button type="submit">Submit</button>
             </form>
