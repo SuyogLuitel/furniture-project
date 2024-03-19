@@ -35,7 +35,7 @@ const UserForm = () => {
             <div>
                 {infos.map((info) => {
                     console.log(info);
-                    return <div className='flex gap-2'>
+                    return <div className='grid grid-cols-5'>
                         <div>{info.name}</div>
                         <div>{info.email}</div>
                         <div>{info.phone}</div>
