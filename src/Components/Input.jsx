@@ -1,6 +1,4 @@
 import React from 'react'
-import { useForm } from 'react-hook-form';
-
 
 const Input = ({ registerName, type, placeholder, register, required, className = 'border border-[#9F9F9F] p-2 my-1 text-sm w-72 rounded-md' }) => {
 
