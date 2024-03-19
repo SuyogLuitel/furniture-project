@@ -1,35 +1,62 @@
 import React from 'react'
-import { useForm } from 'react-hook-form'
-
-const Input = ({ label, register, required }) => (
-    <div className='flex flex-col gap-2 py-3'>
-        <label className='text-xs font-medium'>{label}</label>
-        <input {...register(label, { required })} className='border border-[#9F9F9F] p-2 text-sm w-72 rounded-md' />
-    </div>
-)
+import { useForm } from 'react-hook-form';
 
 const HookForm = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm()
-    const onSubmit = (data) => { console.log(data) }
+    const { register, handleSubmit, formState: { errors } } = useForm();
+
+    const onSubmit = (data) => {
+        localStorage.setItem('data', JSON.stringify(data));
+        input.value = '';
+    };
+
+    const data = JSON.parse(localStorage.getItem('data'));
+    // console.log('data', data)
+    let email = data?.email
+    let password = data?.password
+
+    const handleReset = () => {
+        localStorage.removeItem('data');
+    }
     return (
-        <div className='m-10'>
+        <div>
             <form onSubmit={handleSubmit(onSubmit)}>
-                <div className='flex flex-col gap-2 py-3'>
-                    <label className='text-xs font-medium'>Your Name</label>
-                    <input
-                        {...register('yourName', {
-                            required: true,
-                            maxLength: 30,
-                            pattern: /^[A-Za-z]+$/i
-                        })}
-                        className='border border-[#9F9F9F] p-2 text-sm w-72 rounded-md'
-                    />
-                    {errors?.yourName?.type === "required" && <p className='text-xs text-red-500'>Enter your name</p>}
-                    {errors?.yourName?.type === "maxLength" && (<p className='text-xs text-red-500'>Your name cannot exceed 20 characters</p>)}
-                    {errors?.yourName?.type === "pattern" && (<p className='text-xs text-red-500'>Alphabetical characters only</p>)}
-                </div>
-                <input type="submit" className='text-white text-xs bg-[#B88E2F] px-10 py-2 rounded' />
+                <input
+                    {...register('email', {
+                        required: true,
+                        message: 'is required',
+                        pattern: {
+                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                            message: "Invalid Email"
+                        }
+                    })}
+                    type="email"
+                    req
+                    placeholder='Email'
+                    className='p-2 w-60 border'
+                />
+                {errors?.email && <div className='text-red-500'>{errors?.email?.message}</div>}
+                <br />
+
+                <input
+                    {...register('password', {
+                        required: "Password is required",
+                        minLength: {
+                            value: 8,
+                            message: "Password must be at least 8 characters long"
+                        }
+                    })}
+                    type="password"
+                    placeholder='Password'
+                    className='p-2 w-60 border'
+                />
+                {errors.password && <div className='text-red-500'>{errors.password.message}</div>}
+                <br />
+
+                <button type='submit'>Submit</button>
+                <br />
+                <button onClick={handleReset}>Reset</button>
             </form>
+            <div>mail: {email} pass: {password}</div>
         </div>
     )
 }
