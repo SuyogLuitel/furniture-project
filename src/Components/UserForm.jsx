@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import Input from './Input';
 
 const UserForm = () => {
+    const [editData, setEditData] = useState()
     const { handleSubmit, register, reset } = useForm()
     const [localData, setLocalData] = useState()
     const [hasEventChanged, setHasEventChanged] = useState(false)
@@ -24,24 +25,34 @@ const UserForm = () => {
         localStorage.setItem('data', JSON.stringify(localData))
         setHasEventChanged(!hasEventChanged)
     }
-    const editItems = (index) => {
-        console.log(localData[index]);
+
+    const onEditData = (data) => {
+        const postData = {
+            name: data?.name === '' ? editData?.name : data?.name,
+            email: data?.email === '' ? editData?.email : data?.email
+        }
+        let info = []
+        info.push(postData)
+        localStorage.setItem('data', JSON.stringify(info))
+        reset()
+        setEditData()
+        setHasEventChanged(!hasEventChanged)
     }
     return (
         <div>
             <h2>User Detail</h2>
-            <form onSubmit={handleSubmit(onsubmit)}>
-                <Input type='text' register={register} registerName='name' placeholder='Your name' required />
-                <Input type='email' register={register} registerName='email' placeholder='Email' required />
+            <form onSubmit={handleSubmit(editData ? onEditData : onsubmit)}>
+                <Input type='text' register={register} defaultValue={editData?.name} registerName='name' placeholder='Your name' required />
+                <Input type='email' register={register} defaultValue={editData?.email} registerName='email' placeholder='Email' required />
                 <br />
                 <button type="submit" className='bg-black text-white text-sm p-2 rounded'>Submit</button>
             </form>
             <div>
                 {localData?.map((data, index) => {
-                    return <div className='grid grid-cols-4'>
+                    return <div key={index} className='grid grid-cols-4'>
                         <div>{data?.name}</div>
                         <div>{data?.email}</div>
-                        <button onClick={() => editItems(index)}>Edit</button>
+                        <button onClick={() => setEditData(data)}>Edit</button>
                         <button onClick={() => deleteItems(index)}>Delete</button>
                     </div>
                 })}
