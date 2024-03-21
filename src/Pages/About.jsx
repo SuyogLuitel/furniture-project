@@ -1,23 +1,18 @@
 import React from 'react'
 import UserForm from '../Components/UserForm'
+import SearchFilter from '../Components/SearchFilter'
+import Filter from '../Components/Filter'
+import AFilter from '../Components/AFilter'
 
 const About = () => {
     return (
         <div>
             <UserForm />
+            <Filter />
+            {/* <SearchFilter /> */}
+            {/* <AFilter /> */}
         </div>
     )
 }
-// let info = JSON.parse(localStorage.getItem('data')) ?? [];
-// if (editData) {
-//     const index = info.findIndex(item => item.email === editData.email);
-//     if (index !== -1) {
-//         info[index] = { ...info[index], ...data };
-//     }
-// } else {
-//     info.push(data);
-// }
-// localStorage.setItem('data', JSON.stringify(info));
-// setHasEventChanged(!hasEventChanged);
-// reset();
+
 export default About
