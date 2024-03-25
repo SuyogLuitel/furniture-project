@@ -43,7 +43,7 @@ const Navbar = () => {
                 </div>
             </div>
             {menuOpen && (
-                <div className='mobile-nav absolute flex flex-col gap-4 z-10 top-12 right-4 bg-zinc-50 w-52 p-4 rounded'>
+                <div className='absolute flex flex-col gap-4 z-10 top-12 right-4 bg-zinc-50 w-52 p-4 rounded'>
                     <ul className='flex flex-col gap-4 text-base font-medium'>
                         <li><Link to='/' onClick={toggleMenu}>Home</Link></li>
                         <li><Link to='/shop' onClick={toggleMenu}>Shop</Link></li>

@@ -1,16 +1,20 @@
 import React from 'react'
-import UserForm from '../Components/UserForm'
 import SearchFilter from '../Components/SearchFilter'
+import UserForm from '../Components/UserForm'
 import Filter from '../Components/Filter'
-import AFilter from '../Components/AFilter'
+import Axios from '../Components/Axios'
+import AxiosPost from '../Components/AxiosPost'
+import AxiosLogin from '../Components/AxiosLogin'
 
 const About = () => {
     return (
         <div>
-            {/* <UserForm /> */}
-            <Filter />
             {/* <SearchFilter /> */}
-            {/* <AFilter /> */}
+            {/* <UserForm /> */}
+            {/* <Filter /> */}
+            {/* <Axios /> */}
+            {/* <AxiosPost /> */}
+            <AxiosLogin />
         </div>
     )
 }
