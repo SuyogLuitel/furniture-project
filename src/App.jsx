@@ -10,6 +10,9 @@ import Cart from './Pages/Cart';
 import ProductDescription from './Pages/ProductDescription';
 import Checkout from './Pages/Checkout';
 import ProductComparision from './Pages/ProductComparision';
+import User from './Pages/User';
+import AxiosOtp from './Components/AxiosOtp';
+import AxiosLogin from './Components/AxiosLogin';
 
 function App() {
 
@@ -22,6 +25,9 @@ function App() {
     { path: '/product', element: <ProductDescription /> },
     { path: '/checkout', element: <Checkout /> },
     { path: '/productcomparision', element: <ProductComparision /> },
+    { path: '/user', element: <User /> },
+    { path: '/otp', element: <AxiosOtp /> },
+    { path: '/login', element: <AxiosLogin /> },
   ]
 
   return (

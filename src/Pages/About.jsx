@@ -5,6 +5,8 @@ import Filter from '../Components/Filter'
 import Axios from '../Components/Axios'
 import AxiosPost from '../Components/AxiosPost'
 import AxiosLogin from '../Components/AxiosLogin'
+import AxiosOtp from '../Components/AxiosOtp'
+import Register from '../Components/Register'
 
 const About = () => {
     return (
@@ -14,7 +16,9 @@ const About = () => {
             {/* <Filter /> */}
             {/* <Axios /> */}
             {/* <AxiosPost /> */}
-            <AxiosLogin />
+            {/* <AxiosLogin /> */}
+            {/* <AxiosOtp /> */}
+            <Register />
         </div>
     )
 }

@@ -29,7 +29,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="icons flex gap-8 sm:hidden md:hidden">
-                    <img src={userIcon} alt="User Icon" className='w-6' />
+                    <Link to='/user'><img src={userIcon} alt="User Icon" className='w-6' /></Link>
                     <img src={searchIcon} alt="Search Icon" className='w-6' />
                     <img src={wishlistIcon} alt="Wishlist Icon" className='w-6' />
                     <Link to='/cart'><img src={cartIcon} alt="Cart Icon" className='w-6' /></Link>
@@ -51,7 +51,7 @@ const Navbar = () => {
                         <li><Link to='/contact' onClick={toggleMenu}>Contact</Link></li>
                     </ul>
                     <div className="icons flex gap-4">
-                        <img src={userIcon} alt="User Icon" className='sm:w-6 sm:h-6 md:w-6 md:h-6' />
+                        <Link to='/user'><img src={userIcon} alt="User Icon" className='sm:w-6 sm:h-6 md:w-6 md:h-6' /></Link>
                         <img src={searchIcon} alt="Search Icon" className='sm:w-6 sm:h-6 md:w-6 md:h-6' />
                         <img src={wishlistIcon} alt="Wishlist Icon" className='sm:w-6 sm:h-6 md:w-6 md:h-6' />
                         <Link to='/cart'><img src={cartIcon} alt="Cart Icon" className='sm:w-6 sm:h-6 md:w-6 md:h-6' /></Link>
