@@ -8,14 +8,14 @@ const Register = () => {
                 <img
                     src={loginImage}
                     alt="login image"
-                    className='mx-auto'
+                    className='mx-auto w-80 h-80'
                 />
             </div>
             <div className='bg-[#E5E5E5]'>
                 <div className='mx-32 my-20'>
-                    <h2 className='text-xl font-semibold py-5'>User Login</h2>
+                    <h2 className='text-xl font-semibold py-4'>User Login</h2>
                     <form>
-                        <div className='flex flex-col gap-2 my-5'>
+                        <div className='flex flex-col gap-2 my-4'>
                             <label
                                 className='text-xs text-[#696F79]'
                             >Email</label>
