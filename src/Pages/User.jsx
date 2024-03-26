@@ -16,6 +16,7 @@ const User = () => {
     useEffect(() => {
         axios.get(url, { headers }).then(response => {
             setTeacher(response.data.data[0])
+            console.log(response.data);
         })
         axios.get(url2, { headers }).then(response => {
             // console.log(response.data.data);
