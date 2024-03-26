@@ -15,7 +15,7 @@ const User = () => {
     }
     useEffect(() => {
         axios.get(url, { headers }).then(response => {
-            setTeacher(response.data.data[0])
+            setTeacher(response.data.data)
             console.log(response.data);
         })
         axios.get(url2, { headers }).then(response => {
@@ -27,12 +27,14 @@ const User = () => {
     return (
         <div>
             <div className='grid grid-cols-4 gap-6 m-4 sm:grid-cols-1 md:grid-cols-2'>
-                <ProductItem
-                    coverImg={teacher?.image}
-                    title={teacher?.firstName}
-                    description={teacher?.email}
-                    newPrice={teacher?.phone}
-                />
+                {teacher?.map((item) => (
+                    <ProductItem
+                        coverImg={item?.image}
+                        title={item?.firstName}
+                        description={item?.email}
+                        newPrice={item?.phone}
+                    />
+                ))}
             </div>
             <div>
                 {courses?.map((course) => (
