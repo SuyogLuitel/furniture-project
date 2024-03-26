@@ -1,23 +1,50 @@
+import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import ProductItem from '../Components/ProductItem'
 
 const User = () => {
-    const [localData, setLocalData] = useState([]);
+    const [teacher, setTeacher] = useState()
+    const [courses, setCourses] = useState()
+    const url = 'http://159.223.33.101:9005/api/v3/teacher/list/'
+    const token = JSON.parse(localStorage.getItem('token'))
+    const url2 = 'http://159.223.33.101:9005/api/v3/course/list/'
+
+    const headers = {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+    }
     useEffect(() => {
-        const data = JSON.parse(localStorage.getItem('data'));
-        setLocalData(data);
-    }, []);
+        axios.get(url, { headers }).then(response => {
+            setTeacher(response.data.data[0])
+        })
+        axios.get(url2, { headers }).then(response => {
+            // console.log(response.data.data);
+            setCourses(response.data.data)
+        })
+    }, [])
+
     return (
         <div>
-            <p className='text-xl font-semibold'>User Details</p>
-            {localData?.map((data) => (
-                <div key={data?.id}>
-                    <div>{data?.firstName} {data.middleName} {data.lastName}</div>
-                    <div>{data?.email}</div>
-                    <div>{data?.phone}</div>
-                </div>
-            ))}
-            {/* <h3>{data.firstName}</h3> */}
-
+            <div className='grid grid-cols-4 gap-6 m-4 sm:grid-cols-1 md:grid-cols-2'>
+                <ProductItem
+                    coverImg={teacher?.image}
+                    title={teacher?.firstName}
+                    description={teacher?.email}
+                    newPrice={teacher?.phone}
+                />
+            </div>
+            <div>
+                {courses?.map((course) => (
+                    <div>
+                        <table>
+                            <tr>
+                                <td className='p-2'>{course?.courseID}</td>
+                                <td>{course?.title}</td>
+                            </tr>
+                        </table>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }

@@ -13,6 +13,7 @@ import ProductComparision from './Pages/ProductComparision';
 import User from './Pages/User';
 import AxiosOtp from './Components/AxiosOtp';
 import AxiosLogin from './Components/AxiosLogin';
+import AxiosPost from './Components/AxiosPost';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
     { path: '/user', element: <User /> },
     { path: '/otp', element: <AxiosOtp /> },
     { path: '/login', element: <AxiosLogin /> },
+    { path: '/register', element: <AxiosPost /> }
   ]
 
   return (

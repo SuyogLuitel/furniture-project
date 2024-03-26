@@ -16,9 +16,9 @@ const About = () => {
             {/* <Filter /> */}
             {/* <Axios /> */}
             {/* <AxiosPost /> */}
-            {/* <AxiosLogin /> */}
+            {/* <Register /> */}
+            <AxiosLogin />
             {/* <AxiosOtp /> */}
-            <Register />
         </div>
     )
 }
